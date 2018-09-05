@@ -22,6 +22,11 @@ class ViewController: UIViewController {
         tipControl.setTitle(UserDefaults.standard.string(forKey: "tipPerc3")!+"%", forSegmentAt: 2)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        billField.becomeFirstResponder();
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("hi")
