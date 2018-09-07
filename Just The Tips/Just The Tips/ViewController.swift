@@ -14,6 +14,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipAmt: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
+    @IBOutlet var myMainView: UIView!
+    
+
     
     override func viewWillAppear(_ animated: Bool) {
             print("hello")
@@ -37,6 +40,8 @@ class ViewController: UIViewController {
         tipControl.setTitle(UserDefaults.standard.string(forKey: "tipPerc1")!+"%", forSegmentAt: 0)
         tipControl.setTitle(UserDefaults.standard.string(forKey: "tipPerc2")!+"%", forSegmentAt: 1)
         tipControl.setTitle(UserDefaults.standard.string(forKey: "tipPerc3")!+"%", forSegmentAt: 2)
+        
+        UserDefaults.standard.set(NSDate(), forKey: "startDate")
     }
 
     override func didReceiveMemoryWarning() {
